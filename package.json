@@ -1,0 +1,48 @@
+{
+  "name": "intellij-mouse-clicks",
+  "displayName": "IntelliJ Mouse Clicks",
+  "description": "Middle-click to go to definition, like IntelliJ.",
+  "version": "0.1.0",
+  "publisher": "mrjnsudhan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrjnsudhan/vscode-mouse-click-shortcut-plugin"
+  },
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Keymaps",
+    "Other"
+  ],
+  "keywords": [
+    "intellij",
+    "middle click",
+    "go to definition",
+    "mouse"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "configurationDefaults": {
+      "editor.mouseMiddleClickAction": "ctrlLeftClick"
+    },
+    "commands": [
+      {
+        "command": "intellijMouseClicks.enableMiddleClick",
+        "title": "Enable Middle-Click Go to Definition",
+        "category": "IntelliJ Mouse Clicks"
+      },
+      {
+        "command": "intellijMouseClicks.disableMiddleClick",
+        "title": "Disable Middle-Click Go to Definition",
+        "category": "IntelliJ Mouse Clicks"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "npx @vscode/vsce package"
+  }
+}
